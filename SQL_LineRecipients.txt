@@ -1,0 +1,5 @@
+CREATE TABLE dbo.LineRecipients (
+    RecipientID INT IDENTITY PRIMARY KEY,
+    LineUserID NVARCHAR(100),
+    IsActive BIT DEFAULT 1
+);

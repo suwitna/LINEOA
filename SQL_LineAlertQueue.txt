@@ -1,0 +1,18 @@
+CREATE TABLE dbo.LineAlertQueue (
+    QueueID BIGINT IDENTITY PRIMARY KEY,
+    AlertType NVARCHAR(50),
+    Machine NVARCHAR(50),
+    StatusName NVARCHAR(50),
+    StartTime DATETIME,
+    StopMinutes INT,
+    Message NVARCHAR(MAX),
+    AlertStatus NVARCHAR(20) DEFAULT 'NEW',
+    RetryCount INT DEFAULT 0,
+    CreatedAt DATETIME2 DEFAULT SYSDATETIME(),
+    SentAt DATETIME2 NULL,
+    LastError NVARCHAR(4000)
+);
+
+CREATE UNIQUE INDEX UX_Machine_Stop_Alert
+ON dbo.LineAlertQueue (Machine, AlertType, AlertStatus)
+WHERE AlertStatus = 'NEW';

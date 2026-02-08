@@ -1,0 +1,41 @@
+INSERT INTO [dbo].[LineAlertQueue]
+(
+    [AlertType],
+    [Machine],
+    [StatusName],
+    [StartTime],
+    [StopMinutes],
+    [Message],
+    [AlertStatus],
+    [RetryCount],
+    [CreatedAt],
+    [SentAt],
+    [LastError]
+)
+VALUES
+(
+    'MACHINE_STOP',
+    'CNC-MAZ-2XN-010',
+    'Stop',
+    '2025-09-03 08:30:15.000',
+    153024,
+    '?? Machine Stop AlertMachine: CNC-MAZ-2XN-010Stopped: 153024 minutesSince: 2025-09-03 08:30:15',
+    'NEW',
+    0,
+    '2025-12-18 14:54:32.612',
+    NULL,
+    NULL
+),
+(
+    'MACHINE_STOP',
+    'CNC-MAZ-3XN-029',
+    'Stop',
+    '2025-09-03 08:17:28.000',
+    153037,
+    '?? Machine Stop AlertMachine: CNC-MAZ-3XN-029Stopped: 153037 minutesSince: 2025-09-03 08:17:28',
+    'NEW',
+    0,
+    '2025-12-18 14:54:32.612',
+    NULL,
+    NULL
+);
