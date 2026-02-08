@@ -532,7 +532,7 @@ foreach ($a in $alerts) {
 #############################################
 
 $SqlServer = "localhost"
-$Database  = "Prachinburi2"
+$Database  = "***"
 $ConnStr   = "Server=$SqlServer;Database=$Database;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;"
 
 $query = @"
